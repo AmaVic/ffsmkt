@@ -1,0 +1,22 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:be.vamaralds.ffsmkt////PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/index.html
+$dokka.location:be.vamaralds.ffsmkt/Event///PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-event/index.html
+$dokka.location:be.vamaralds.ffsmkt/Event/Event/#kotlin.String#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-event/-event.html
+$dokka.location:be.vamaralds.ffsmkt/Event/data/#/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-event/data.html
+$dokka.location:be.vamaralds.ffsmkt/Event/type/#/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-event/type.html
+$dokka.location:be.vamaralds.ffsmkt/FsmDef///PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-fsm-def/index.html
+$dokka.location:be.vamaralds.ffsmkt/FsmDef/FsmDef/#kotlin.String#kotlin.collections.Set[be.vamaralds.ffsmkt.Transition]/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-fsm-def/-fsm-def.html
+$dokka.location:be.vamaralds.ffsmkt/FsmDef/canHandleEventType/#kotlin.String#kotlin.String/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-fsm-def/can-handle-event-type.html
+$dokka.location:be.vamaralds.ffsmkt/FsmDef/initialState/#/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-fsm-def/initial-state.html
+$dokka.location:be.vamaralds.ffsmkt/FsmDef/nextState/#kotlin.String#kotlin.String/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-fsm-def/next-state.html
+$dokka.location:be.vamaralds.ffsmkt/FsmError.InvalidTransition///PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-fsm-error/-invalid-transition/index.html
+$dokka.location:be.vamaralds.ffsmkt/FsmError.InvalidTransition/InvalidTransition/#kotlin.String#kotlin.String/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-fsm-error/-invalid-transition/-invalid-transition.html
+$dokka.location:be.vamaralds.ffsmkt/FsmError///PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-fsm-error/index.html
+$dokka.location:be.vamaralds.ffsmkt/Transition///PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-transition/index.html
+$dokka.location:be.vamaralds.ffsmkt/Transition/Transition/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-transition/-transition.html
+$dokka.location:be.vamaralds.ffsmkt/Transition/fromState/#/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-transition/from-state.html
+$dokka.location:be.vamaralds.ffsmkt/Transition/onEventType/#/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-transition/on-event-type.html
+$dokka.location:be.vamaralds.ffsmkt/Transition/toState/#/PointingToDeclaration/ffsmkt/be.vamaralds.ffsmkt/-transition/to-state.html
+be.vamaralds.ffsmkt
+
