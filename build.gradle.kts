@@ -6,8 +6,10 @@ plugins {
     id("org.jetbrains.dokka") version "1.8.20"
     id("org.jetbrains.kotlinx.kover") version "0.7.5"
     id("com.adarshr.test-logger") version "4.0.0"
+    id("net.researchgate.release") version "2.8.1"
     `java-library`
     `maven-publish`
+    signing
 }
 
 group = "be.vamaralds"
@@ -105,6 +107,8 @@ tasks.jar {
 }
 
 java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
     withSourcesJar()
     withJavadocJar()
 }
@@ -118,7 +122,7 @@ publishing {
 
             pom {
                 name.set("ffsmkt")
-                description.set("Functional Finite State Machine Library for the JVM")
+                description.set("Functional finite state machine library for the JVM")
                 url.set("https://github.com/AmaVic/ffsmkt")
                 licenses {
                     license {
@@ -128,20 +132,19 @@ publishing {
                 }
                 developers {
                     developer {
-                        id.set("fanceCode")
-                        name.set("John Doe")
-                        email.set("info@example.com")
+                        id.set("AmaVic")
+                        name.set("Victor Amaral de Sousa")
                     }
                 }
                 scm {
-                    connection.set("https://github.com/fancycode/fancy-library.git")
-                    developerConnection.set("https://github.com/fancycode/fancy-library.git")
-                    url.set("https://github.com/fancycode/fancy-library")
+                    connection.set("https://github.com/AmaVic/ffsmkt/ffsmkt.git")
+                    developerConnection.set("https://github.com/AmaVic/ffsmkt/ffsmkt.git")
+                    url.set("https://github.com/AmaVic/ffsmkt")
                 }
             }
         }
     }
-    }
+
     repositories {
         maven {
             url = uri(layout.buildDirectory.dir("localrepo"))
@@ -156,6 +159,37 @@ publishing {
                 username = repositoryUser
                 password = repositoryPassword
             }
+        }
+    }
+}
+
+signing {
+    if (!signingKeyId.isNullOrEmpty()) {
+        project.ext["signing.keyId"] = signingKeyId
+        project.ext["signing.password"] = signingPassword
+        project.ext["signing.secretKeyRingFile"] = signingSecretKeyRingFile
+
+        logger.info("Signing key id provided. Sign artifacts for $project.")
+
+        isRequired = true
+    } else if (!signingSecretKey.isNullOrEmpty()) {
+        useInMemoryPgpKeys(signingSecretKey, signingPassword)
+    } else {
+        logger.warn("${project.name}: Signing key not provided. Disable signing for $project.")
+        isRequired = false
+    }
+
+    sign(publishing.publications)
+}
+
+release {
+    buildTasks = listOf("build", "publish")
+}
+
+tasks {
+    named<Javadoc>("javadoc") {
+        if (JavaVersion.current().isJava9Compatible) {
+            (options as StandardJavadocDocletOptions).addBooleanOption("html5", true)
         }
     }
 }
